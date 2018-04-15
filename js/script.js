@@ -68,6 +68,7 @@ function menuDesktop() {
 }
 
 function tooltip(elem) {
+    var posPageY = window.pageYOffset;
     var tooltip = $('.tooltip');
     var tooltipText = $(elem).attr('data-tooltip');
     var leftPos = $(elem).offset().left;
@@ -75,7 +76,7 @@ function tooltip(elem) {
     tooltip.html(tooltipText);
     tooltip.css({
         left: leftPos - (37 + $('.tooltip').width()),
-        top: topPos - ($('.tooltip').height() / 2)
+        top: (topPos - ($('.tooltip').height() / 2)) - posPageY
     });
     tooltip.css('opacity', '1');
 }
@@ -461,7 +462,7 @@ function SlideWorks() {
             }, 800);
         },
         this.rotateLargeViewer = function (posY) {
-            if (posY >= $('.skills').offset().top) {
+            if (posY >= $('.containerSkills').offset().top) {
                 this.$works.each(function (index) {
                     $(this).delay(index * 100).animate({
                         textIndent: 0

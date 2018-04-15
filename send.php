@@ -10,12 +10,12 @@
 
     $return = Array();
 
-    $dokogo = "patryk.milowski@gmail.com";
+    $dokogo = "patryk.milowski@pmilowski.pl	";
 
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=UTF-8'. "\r\n";
     $headers .= 'From: ' . $email ."\r\n";
-    $title = "Wiadomość z formmularza kontaktowego";
+    $title = "Wiadomość z formularza kontaktowego";
 
     $text  = "
         <html>
