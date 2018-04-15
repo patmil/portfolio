@@ -1,0 +1,320 @@
+//Media queries
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    body {
+        font-size: 20px;
+    }
+    header {
+        img {
+            width: 90%;
+            transform: rotateZ(0deg);
+            top: 30%;
+            left: 0;
+            animation: HeaderPictureHorizontal 1.5s;
+        }
+    }
+    .name {
+        top: 70%;
+    }
+    .menu-mobile {
+        width: 40vw;
+        left: -50vw;
+    }
+    .containerSkills {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .skill {
+        width: 50%;
+    }
+    .level {
+        li {
+            font-size: 0.8em;
+        }
+    }
+    article {
+        h3 {
+            width: 50%;
+            float: left;
+        }
+    }
+    .bulidWith {
+        margin-top: 30px;
+        clear: both;
+    }
+    .thumbnail-page {
+        float: left;
+        width: 45%;
+        margin-left: 10px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .menu-mobile {
+        width: 30vw;
+        left: -40vw;
+    }
+    .about-me {
+        margin-bottom: 30px;
+        img {
+            margin: 0 20px 0 20px;
+            width: 50%;
+            float: left;
+        }
+        p {
+            text-align: left !important;
+            margin-right: 50px;
+        }
+        p:first-of-type {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        p:not(:first-of-type) {
+            visibility: visible;
+            height: auto;
+            padding: 10px;
+            padding-left: 40px;
+        }
+        span {
+            display: none;
+        }
+    }
+    .skills {
+        position: relative;
+        height: 40vh;
+        min-height: 500px;
+    }
+    .technology {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 5%;
+        margin-top: 100px;
+        height: 85%;
+        .fa-plus,
+        .fa-minus {
+            display: none;
+        }
+        h4 {
+            background-image: linear-gradient(45deg, #636363, #b3b3b3);
+            width: 25%;
+            text-align: center;
+            color: #666666;
+            transition: all 0.5s;
+        }
+    }
+    .block {
+        font-size: 50px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .containerSkills {
+        position: relative;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 5%;
+        justify-content: start;
+        z-index: 1;
+        opacity: 0;
+    }
+    .skill {
+        text-align: center;
+        width: 100%;
+    }
+    .activeSkill {
+        background: transparent !important;
+        color: $colorWhite !important;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+    .container-jobs {
+        width: 90%;
+        margin: 0 auto;
+        overflow: initial;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+    }
+    article {
+        position: relative;
+        width: 100%;
+        padding-bottom: 60px;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        transition: all .5s;
+        h3 {
+            width: 100%;
+            float: none;
+        }
+        span {
+            position: absolute;
+            bottom: 20px;
+            margin: 0;
+        }
+    }
+    .bulidWith {
+        margin-top: 10px;
+        clear: both;
+    }
+    .thumbnail-page {
+        float: none;
+        width: 100%;
+        margin-left: auto;
+        opacity: 0;
+    }
+    input,
+    label,
+    textarea {
+        width: 100%;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    body {
+        font-size: 16px;
+    }
+    .toTop:hover {
+        background: $colorRed;
+        color: $colorWhite;
+        border-radius: 50%;
+        transition: .5s;
+        cursor: pointer;
+    }
+    section:not(.name):not(.portfolio) {
+        height: 100vh;
+    }
+    header {
+        img {
+            width: 80%;
+            top: 10%;
+        }
+    }
+    .nav-toggle {
+        top: 20px;
+        right: 20px;
+    }
+    #desktop-menu {
+        display: block;
+    }
+    #menu-mobile {
+        display: none;
+    }
+    .about-me {
+        position: relative;
+        margin-bottom: 0;
+        img {
+            width: 20%;
+            margin: 0 100px;
+            margin-bottom: 20px;
+        }
+    }
+    .social {
+        display: grid;
+    }
+    .skills {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    .technology {
+        height: 70%;
+    }
+    .containerSkills {
+        grid-template-columns: 30% 30% 30%;
+    }
+    .level {
+        li {
+            font-size: 1em;
+        }
+    }
+    .portfolio {
+        margin: 30px auto 0 auto;
+    }
+    article {
+        span {
+            a:hover {
+                border: none;
+                color: $colorWhite;
+                background: $colorRed;
+                border-radius: 10px;
+                transition: all .5s;
+            }
+        }
+    }
+    .contact {
+        margin-top: 30px;
+    }
+    button:enabled:hover,
+    button[enabled]:hover {
+        border: none;
+        color: $colorWhite;
+        background: $colorRed;
+        border-radius: 10px;
+        transition: all .5s;
+    }
+}
+
+//Device with orientation Landscape
+@media (max-width: 575.98px) and (orientation: landscape) {
+    header {
+        img {
+            width: 80%;
+            transform: rotateZ(0deg);
+            top: 10%;
+            left: 0;
+            animation: HeaderPictureHorizontal 1.5s;
+        }
+    }
+    .name {
+        top: 70%;
+    }
+    .menu-mobile {
+        width: 40vw;
+        left: -50vw;
+    }
+    .about-me {
+        img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 767.98px) and (orientation: landscape) {
+    header {
+        img {
+            width: 80%;
+            transform: rotateZ(0deg);
+            top: 10%;
+            left: 0;
+            animation: HeaderPictureHorizontal 1.5s;
+        }
+    }
+    .about-me {
+        img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 991.98px) and (orientation: landscape) {
+    header {
+        img {
+            width: 80%;
+            transform: rotateZ(0deg);
+            top: 10%;
+            left: 0;
+            animation: HeaderPictureHorizontal 1.5s;
+        }
+    }
+    .about-me {
+        img {
+            width: 30%;
+        }
+    }
+}
