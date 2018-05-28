@@ -1,26 +1,6 @@
-//All variable and extends
-//Colors
 $colorPrimary: #4285f4;
+$colorSecondary: #333333;
 $colorWhite: #ffffff;
-$colorBlack: #212121;
-$colorLightGrey: #646464;
-$colorBlue: #0099ff;
-$colorRed: #f44336;
-$transparent: transparent;
-//Shadow
-$sectionShadow: 0 0 5px 0 rgba(0, 0, 0, 0.16),
-0 0 10px 0 rgba(0, 0, 0, 0.12);
-//Extends
-%headerCategory {
-    width: 90%;
-    margin: 0 auto;
-    background: $colorPrimary;
-    color: $colorWhite;
-    padding: 6px 0;
-}
-
-%button {
-    border: 2px solid $colorRed;
-    color: $colorRed;
-    transition: all .5s;
-}
+$colorDarkGrey: #585858;
+$colorGrey: #808080;
+$colorLightGrey: #f7f7f7;
